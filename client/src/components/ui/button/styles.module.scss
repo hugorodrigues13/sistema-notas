@@ -1,0 +1,40 @@
+.button{
+    display: flex;
+    width: 183px;
+    align-items: center;
+    height: 37px;
+    background-color: var(--yellow-900);
+    border: 0;
+    border-radius: 12px;
+    transition: filter 0.2s;
+
+    &[disabled]{
+        cursor: not-allowed;
+        svg{
+            animation: animate 2s infinite;
+        }
+    }
+    
+    &:hover{
+        filter: brightness(1.05);
+    }
+}
+
+.buttonText{
+    display: flex;
+    width: 100%;
+    margin: 0 1rem;
+    color: var(--black);
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+@keyframes animate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
